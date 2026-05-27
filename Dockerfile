@@ -1,8 +1,8 @@
 ﻿# see https://hub.docker.com/r/linuxserver/minetest 
 # for more information
-FROM linuxserver/luanti:5.14.0
-LABEL author="Kim Ragna Schwerdt" 
-LABEL maintainer="minecraft-admins.de@capgemini.com"
+FROM linuxserver/luanti:5.16.0
+LABEL author="Benjamin Manns" 
+LABEL maintainer="benjamin.manns@gardsfabriken.de"
 
 # copy init script for environment variables -> minetest.conf
 COPY root /
@@ -14,7 +14,7 @@ COPY games /config/.minetest/games
 # mod incompatibility with minetest_game : alphabet, nc_stairs, street_signs
 COPY mods /config/.minetest/games/minetest_game/mods
 
-ENV SERVER_NAME="Minetest@Capgemini" 
+ENV SERVER_NAME="Minetest@Gardsfabriken" 
 ENV MOTD="Welcome to the training" 
 ENV MAX_USERS=50 
 ENV SERVER_DESCRIPTION="Minetest Server für Trainings bei Capgemini Deutschland GmbH" 
